@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Cleanup'){
       steps{
-        sh "sh /home/ubuntu/dockercleanup.sh"
+        sh "sh dockercleanup.sh"
       }
     }
     stage('Build Docker Image'){
