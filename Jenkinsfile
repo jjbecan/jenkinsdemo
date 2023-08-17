@@ -1,11 +1,6 @@
 pipeline{
   agent any
   stages{
-    stage('Cleanup'){
-      steps{
-        sh "sh /var/lib/jenkins/dockercleanup.sh" || true
-      }
-    }
     stage('Build Docker Image'){
      steps{
         sh "docker build -t flask-app -f /dockerfileexercise/Task1/Dockerfile"
