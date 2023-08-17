@@ -4,7 +4,7 @@ pipeline{
     stage('Build Docker Image'){
      steps{
        sh "cd dockerfileexercise/Task1"
-       sh "docker build -t flask-app ."
+       sh "docker build -t flask-app /var/lib/jenkins/workspace/Lab3/dockerfileexercise/Task1"
      }
     }
     stage('Run Container'){
