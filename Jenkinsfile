@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Cleanup'){
       steps{
-        sh "sh /var/lib/jenkins/dockercleanup.sh"
+        sh "sh /var/lib/jenkins/dockercleanup.sh" || true
       }
     }
     stage('Build Docker Image'){
