@@ -8,7 +8,7 @@ pipeline{
     }
     stage('Build Docker Image'){
      steps{
-        docker build -t flask-app -f dockerfileexercise/Task1/Dockerfile
+        docker build -t flask-app -f /dockerfileexercise/Task1/Dockerfile
      }
     }
     stage('Run Container'){
